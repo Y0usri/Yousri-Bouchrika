@@ -3,6 +3,27 @@
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Theme toggle (dark by default). The initial attribute is already set
+     by an inline script in <head> to avoid a flash of the wrong theme;
+     this just wires up the button and persists the choice. */
+  var THEME_KEY = 'yb-theme';
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('theme-toggle');
+
+  function syncThemeToggle(theme) {
+    themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Activer le mode clair' : 'Activer le mode sombre');
+  }
+
+  syncThemeToggle(root.getAttribute('data-theme'));
+
+  themeToggle.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    syncThemeToggle(next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+  });
+
   /* Sticky header: add shadow once the page is scrolled */
   var header = document.getElementById('site-header');
   function updateHeaderState() {
