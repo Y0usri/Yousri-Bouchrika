@@ -58,4 +58,35 @@
       img.replaceWith(placeholder);
     });
   });
+
+  /* Copy the contact e-mail address, since mailto: links do nothing on
+     machines with no default mail client configured. Uses execCommand
+     (synchronous, no permission prompt) rather than the async Clipboard
+     API, which can hang waiting on a permission decision in some browsers. */
+  var copyEmailBtn = document.getElementById('copy-email');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', function () {
+      var email = copyEmailBtn.getAttribute('data-email');
+      var defaultLabel = copyEmailBtn.getAttribute('data-default-label');
+      var textarea = document.createElement('textarea');
+      textarea.value = email;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+
+      var copied = false;
+      try {
+        copied = document.execCommand('copy');
+      } catch (e) {
+        copied = false;
+      }
+      document.body.removeChild(textarea);
+
+      copyEmailBtn.textContent = copied ? 'Adresse copiée' : 'Copie impossible';
+      setTimeout(function () {
+        copyEmailBtn.textContent = defaultLabel;
+      }, 2000);
+    });
+  }
 })();

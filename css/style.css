@@ -196,10 +196,13 @@ p:last-child { margin-bottom: 0; }
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 0.95rem;
+  font-family: inherit;
   border: 1px solid transparent;
+  cursor: pointer;
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 .btn:hover { text-decoration: none; }
+button.btn { appearance: none; -webkit-appearance: none; }
 
 .btn-primary {
   background: var(--color-navy);
