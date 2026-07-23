@@ -1,237 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yousri Bouchrika | Portfolio BTS SIO SLAM</title>
-    <meta name="description" content="Portfolio officiel de Yousri Bouchrika, étudiant en BTS SIO SLAM : projets web, compétences front-end/back-end, stages chez Ovesh et contact professionnel." />
-    <meta name="author" content="Yousri Bouchrika" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="keywords" content="Yousri Bouchrika, portfolio Yousri Bouchrika, BTS SIO SLAM, développeur web, étudiant informatique" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:title" content="Yousri Bouchrika | Portfolio BTS SIO SLAM" />
-    <meta property="og:description" content="Découvrez le portfolio de Yousri Bouchrika : compétences, projets, stages et moyens de contact." />
-    <meta property="og:site_name" content="Portfolio de Yousri Bouchrika" />
-    <meta property="og:url" content="/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Yousri Bouchrika | Portfolio BTS SIO SLAM" />
-    <meta name="twitter:description" content="Portfolio de Yousri Bouchrika, étudiant en BTS SIO SLAM." />
-    <meta name="google-site-verification" content="9avyLDFerYInwZfkF8aXX22dBIzycYHF071qeIq9CHM" />
-    <link rel="canonical" href="/" />
-    <link rel="alternate" hreflang="fr-FR" href="/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Yousri Bouchrika",
-        "jobTitle": "Étudiant BTS SIO SLAM",
-        "description": "Étudiant en BTS SIO SLAM spécialisé en développement front-end et back-end.",
-        "email": "mailto:yousri.bchk@gmail.com",
-        "url": "/",
-        "sameAs": [
-          "https://www.linkedin.com/in/yousri-bouchrika-b269602b3/",
-          "https://github.com/Y0usri"
-        ]
-      }
-    </script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#home" class="logo">Yousri Bouchrika</a>
-        <nav class="nav">
-          <a href="#about">👤 À propos</a>
-          <a href="#skills">🧠 Compétences</a>
-          <a href="#projects">💼 Projets</a>
-          <a href="#journey">🛤️ Parcours</a>
-          <a href="#contact">📬 Contact</a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="google-site-verification" content="9avyLDFerYInwZfkF8aXX22dBIzycYHF071qeIq9CHM">
+  <title>Yousri Bouchrika — Développeur web junior PHP/Symfony</title>
+  <meta name="description" content="Portfolio de Yousri Bouchrika, développeur web junior spécialisé en PHP, Symfony, JavaScript et MySQL, à la recherche d'un stage à Chartres.">
 
-    <main id="home">
-      <section class="hero container">
-        <div class="hero-text">
-          <p class="tag">BTS SIO • 2e année • Option SLAM</p>
-          <h1>🚀 Yousri Bouchrika — Portfolio BTS SIO SLAM</h1>
-          <p class="lead">
-            Je suis Yousri Bouchrika. Je conçois des applications
-            web et logicielles avec une approche orientée qualité, UX et bonnes
-            pratiques.
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yousri Bouchrika — Développeur web junior PHP/Symfony">
+  <meta property="og:description" content="Portfolio de Yousri Bouchrika, développeur web junior spécialisé en PHP, Symfony, JavaScript et MySQL, à la recherche d'un stage à Chartres.">
+  <meta property="og:image" content="assets/images/yousri-bouchrika.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://y0usri.github.io/Yousri-Bouchrika/">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://y0usri.github.io/Yousri-Bouchrika/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo">YB</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Ouvrir le menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#experiences">Expériences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Accueil -->
+    <section id="accueil" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Développeur web junior PHP / Symfony</p>
+          <h1>Yousri Bouchrika</h1>
+          <p class="hero-lead">
+            Développeur web junior ayant suivi deux années de BTS SIO option SLAM, je recherche
+            actuellement un stage en développement web à Chartres ou dans ses environs. Je souhaite
+            renforcer mes compétences back-end et contribuer à des fonctionnalités concrètes au sein
+            d'une équipe technique.
           </p>
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+            <a href="#projets" class="btn btn-primary">Découvrir mes projets</a>
             <a href="#contact" class="btn btn-secondary">Me contacter</a>
           </div>
+          <p class="hero-meta">Disponible du lundi au vendredi · Durée flexible · Chartres</p>
         </div>
-        <aside class="hero-card">
-          <h2>🪪 Profil rapide</h2>
-          <ul>
-            <li><strong>Nom :</strong> Yousri Bouchrika</li>
-            <li><strong>Formation :</strong> BTS SIO SLAM (2024-2026)</li>
-            <li><strong>Localisation :</strong> France</li>
-            <li><strong>Recherche :</strong> Alternance / Stage</li>
-          </ul>
-        </aside>
-      </section>
 
-      <section id="about" class="section container">
-        <h2>👤 À propos de moi</h2>
-        <p>
-          Je m'appelle Yousri Bouchrika, étudiant en BTS SIO option SLAM, et je développe des solutions adaptées
-          aux besoins utilisateurs, de la conception à la mise en production.
-          J’aime apprendre de nouvelles technologies et progresser sur
-          l’architecture logicielle, les bases de données et la sécurité.
-        </p>
-      </section>
-
-      <section id="skills" class="section container">
-        <h2>🧠 Compétences</h2>
-        <div class="grid skills-grid">
-          <article class="card">
-            <h3>🎨 Front-end</h3>
-            <p>HTML, CSS, JavaScript, responsive design, accessibilité.</p>
-          </article>
-          <article class="card">
-            <h3>⚙️ Back-end</h3>
-            <p>PHP, Python, Node.js, API REST, gestion des sessions.</p>
-          </article>
-          <article class="card">
-            <h3>🗄️ Base de données</h3>
-            <p>MySQL, PostgreSQL, modélisation Merise, SQL avancé.</p>
-          </article>
-          <article class="card">
-            <h3>🛠️ Outils</h3>
-            <p>Git, GitHub, VS Code, Docker (bases), méthodes Agile.</p>
-          </article>
+        <div class="hero-photo reveal">
+          <img
+            src="assets/images/yousri-bouchrika.jpg"
+            alt="Photo de Yousri Bouchrika, développeur web junior"
+            width="420"
+            height="420"
+            loading="eager"
+          >
         </div>
-      </section>
-
-      <section id="projects" class="section container">
-        <h2>💼 Projets</h2>
-        <div class="grid projects-grid">
-          <article class="project-card">
-            <h3>Bot d’alerte Vinted (Email & Telegram)</h3>
-            <p>
-              Développement d’un bot qui surveille les nouvelles annonces Vinted
-              selon des critères précis et envoie des alertes en temps réel par
-              email ou message Telegram.
-            </p>
-            <span>Tech : Python, API Telegram, SMTP, automatisation</span>
-          </article>
-          <article class="project-card">
-            <h3>Bot d’alerte Vinted (Version GitHub Actions)</h3>
-            <p>
-              Version déployée et exécutée automatiquement avec GitHub Actions
-              pour lancer les vérifications à intervalle régulier sans serveur
-              local allumé en continu.
-            </p>
-            <span>Tech : Python, GitHub Actions, YAML, notifications</span>
-          </article>
-          <article class="project-card">
-            <h3>Site fictif FC FULBERT (Projet SEO)</h3>
-            <p>
-              Conception d’un site vitrine fictif pour un club de football dans
-              le cadre d’un projet SEO en classe : optimisation des balises,
-              structure sémantique, contenus et référencement local.
-            </p>
-            <span>Tech : HTML, CSS, SEO on-page, Google Search Console</span>
-          </article>
-          <article class="project-card">
-            <h3>Site vitrine Kodari (projet non publié)</h3>
-            <p>
-              Réalisation d’un site pour Kodari, mini-entreprise de création de
-              sites web : structuration des pages, mise en avant des services et
-              design orienté conversion.
-            </p>
-            <span>Tech : HTML, CSS, JavaScript</span>
-          </article>
-        </div>
-      </section>
-
-      <section id="journey" class="section container">
-        <h2>🛤️ Parcours</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h3>2024 - 2026 • BTS SIO SLAM</h3>
-            <p>Développement d’applications, cybersécurité, projets en équipe.</p>
-          </div>
-          <div class="timeline-item">
-            <h3>2025 • Stage chez Ovesh (Front-end)</h3>
-            <p>Développement et amélioration d’interfaces utilisateur orientées expérience et responsive design.</p>
-          </div>
-          <div class="timeline-item">
-            <h3>2026 • Stage chez Ovesh (Back-end)</h3>
-            <p>Participation au développement côté serveur, traitement des données et logique métier.</p>
-          </div>
-          <div class="timeline-item">
-            <h3>🏅 Certifications</h3>
-            <p>PIX</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section container">
-        <h2>📬 Contact</h2>
-        <div class="contact-box">
-          <p>Vous pouvez me contacter pour un stage, une alternance ou un projet :</p>
-          <div class="contact-list">
-            <a class="contact-item" href="mailto:yousri.bchk@gmail.com">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.7-.5L12 10.2 19.3 5H4.7Zm15.3 1.7-7.4 5.3a1 1 0 0 1-1.2 0L4 6.7v11.8c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V6.7Z" />
-                </svg>
-              </span>
-              <span>
-                <strong>Email</strong>
-                <small>yousri.bchk@gmail.com</small>
-              </span>
-            </a>
-
-            <a class="contact-item" href="https://www.linkedin.com/in/yousri-bouchrika-b269602b3/" target="_blank" rel="noopener noreferrer">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M6.9 8.1A2.1 2.1 0 1 1 6.9 4a2.1 2.1 0 0 1 0 4.1ZM5 9.8h3.8V20H5V9.8Zm6.2 0H15v1.4h.1c.5-.9 1.7-1.8 3.5-1.8 3.8 0 4.4 2.5 4.4 5.8V20h-3.8v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2V20h-3.8V9.8Z" />
-                </svg>
-              </span>
-              <span>
-                <strong>LinkedIn</strong>
-                <small>Voir mon profil</small>
-              </span>
-            </a>
-
-            <a class="contact-item" href="https://github.com/Y0usri" target="_blank" rel="noopener noreferrer">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.8 1.2 1.8 1.2 1 .1 1.6-.6 2-.9.1-.7.4-1.1.7-1.4-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.4-1.5 3.4-1.2 3.4-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.6-2.8 5.5-5.5 5.8.4.4.8 1.1.8 2.3v3.3c0 .4.2.7.8.6A11.3 11.3 0 0 0 12 .7Z" />
-                </svg>
-              </span>
-              <span>
-                <strong>GitHub</strong>
-                <small>Voir mes repositories</small>
-              </span>
-            </a>
-          </div>
-
-          <a class="btn btn-primary contact-cta" href="mailto:yousri.bchk@gmail.com?subject=Contact%20Portfolio%20-%20Yousri%20Bouchrika">
-            Envoyer un email
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 - Yousri Bouchrika • Portfolio BTS SIO SLAM</p>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- À propos -->
+    <section id="a-propos" class="section">
+      <div class="container">
+        <h2 class="reveal">À propos</h2>
+        <div class="about-content reveal">
+          <p>
+            J'ai suivi deux années de BTS Services informatiques aux organisations, option SLAM,
+            au lycée Fulbert de Chartres. Je prépare actuellement les épreuves restantes du diplôme
+            en candidat individuel pour la session 2027.
+          </p>
+          <p>
+            Au cours de mes deux stages chez Ovesh, j'ai travaillé sur le développement d'interfaces
+            en HTML et CSS, la création d'un système de connexion et d'authentification en PHP relié
+            à MySQL, la structuration de tables de base de données et l'intégration d'un paiement en
+            ligne avec Stripe.
+          </p>
+          <p>
+            Je souhaite aujourd'hui rejoindre une équipe technique afin de progresser sur des projets
+            réels, consolider mes connaissances en PHP/Symfony et gagner en autonomie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expériences -->
+    <section id="experiences" class="section section-alt">
+      <div class="container">
+        <h2 class="reveal">Expériences</h2>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-header">
+              <h3>Stagiaire développeur back-end — Ovesh</h3>
+              <p class="timeline-meta">Paris · Janvier 2026 à février 2026</p>
+            </div>
+            <ul class="timeline-list">
+              <li>Intégration d'un paiement en ligne avec Stripe sur un site développé en PHP, HTML et JavaScript.</li>
+              <li>Développement d'un système de connexion et d'authentification en PHP relié à une base de données MySQL.</li>
+              <li>Création et structuration de tables MySQL dans un environnement virtualisé avec VirtualBox.</li>
+            </ul>
+            <p class="tech-list">PHP · MySQL · JavaScript · HTML · Stripe · VirtualBox</p>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-header">
+              <h3>Stagiaire développeur front-end — Ovesh</h3>
+              <p class="timeline-meta">Paris · Mai 2025 à juin 2025</p>
+            </div>
+            <ul class="timeline-list">
+              <li>Développement et intégration de pages et de contenus en HTML et CSS.</li>
+              <li>Utilisation de Visual Studio Code, Git et GitHub.</li>
+              <li>Échanges avec le maître de stage via Slack et publication régulière des avancées.</li>
+            </ul>
+            <p class="tech-list">HTML · CSS · Git · GitHub · Slack</p>
+          </li>
+        </ol>
+
+        <div class="other-experiences reveal">
+          <h3 class="other-experiences-title">Autres expériences</h3>
+
+          <div class="other-experience">
+            <div class="timeline-header">
+              <h4>Employé polyvalent à temps partiel — Burger King</h4>
+              <p class="timeline-meta">Chartres · Janvier 2026 à aujourd'hui</p>
+            </div>
+            <p>Service client sur plusieurs postes, travail en équipe et respect des procédures dans un environnement à forte activité.</p>
+          </div>
+
+          <div class="other-experience">
+            <div class="timeline-header">
+              <h4>Employé polyvalent à temps partiel — Action</h4>
+              <p class="timeline-meta">Chartres · Avril 2025 à juillet 2025</p>
+            </div>
+            <p>Gestion de la caisse, mise en rayon, réapprovisionnement, suivi des stocks et organisation de l'espace de vente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section">
+      <div class="container">
+        <h2 class="reveal">Projets</h2>
+
+        <div class="projects">
+
+          <article class="project reveal">
+            <div class="project-body">
+              <h3>EasyBTS — Application web pour étudiants</h3>
+              <p>Application web réalisée en équipe dans le cadre du BTS SIO avec Symfony.</p>
+
+              <p class="project-subheading">Mes contributions</p>
+              <ul>
+                <li>Développement de la page de connexion.</li>
+                <li>Liaison de l'authentification avec MySQL grâce à Symfony et Doctrine ORM.</li>
+                <li>Intégration d'une fonctionnalité d'envoi d'e-mails.</li>
+                <li>Participation à l'intégration du Système de design de l'État.</li>
+                <li>Utilisation de Git et GitHub pour le travail collaboratif.</li>
+              </ul>
+
+              <p class="tech-list">PHP · Symfony · MySQL · Doctrine ORM · Twig · DSFR · Git</p>
+            </div>
+
+            <div class="project-gallery">
+              <img src="assets/images/easybts-1.webp" alt="Capture d'écran de l'application EasyBTS" loading="lazy" width="480" height="300">
+              <img src="assets/images/easybts-2.webp" alt="Capture d'écran de l'application EasyBTS, page de connexion" loading="lazy" width="480" height="300">
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-body">
+              <h3>Outil de veille automatisée d'annonces Vinted</h3>
+              <p>Outil personnel réalisé en Python permettant de surveiller régulièrement de nouvelles annonces selon plusieurs critères personnalisés, sans affiliation avec Vinted.</p>
+
+              <p class="project-subheading">Fonctionnalités</p>
+              <ul>
+                <li>Analyse des nouvelles annonces toutes les trois minutes.</li>
+                <li>Filtrage par mots-clés et prix.</li>
+                <li>Exclusion des résultats ne correspondant pas aux critères.</li>
+                <li>Détection des doublons.</li>
+                <li>Notifications automatiques par e-mail.</li>
+                <li>Gestion de plusieurs recherches personnalisées.</li>
+              </ul>
+
+              <p class="tech-list">Python · Automatisation · Traitement de données · Notifications par e-mail</p>
+            </div>
+
+            <div class="project-gallery">
+              <img src="assets/images/vinted-tool-1.webp" alt="Capture d'écran de l'outil de veille d'annonces" loading="lazy" width="480" height="300">
+              <img src="assets/images/vinted-tool-2.webp" alt="Capture d'écran des résultats filtrés de l'outil de veille" loading="lazy" width="480" height="300">
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-body">
+              <h3>FC Fulbert — Site web vitrine</h3>
+              <p>Site web vitrine réalisé en équipe autour du projet FC Fulbert.</p>
+
+              <p class="project-subheading">Mes contributions</p>
+              <ul>
+                <li>Développement et intégration des pages.</li>
+                <li>Structuration du contenu et de la navigation.</li>
+                <li>Adaptation de l'interface.</li>
+                <li>Optimisation de certains contenus pour le référencement naturel.</li>
+                <li>Déploiement sur Netlify.</li>
+              </ul>
+
+              <p class="tech-list">HTML · CSS · JavaScript · SEO · Git · Netlify</p>
+            </div>
+
+            <div class="project-gallery">
+              <img src="assets/images/fc-fulbert-1.webp" alt="Capture d'écran du site vitrine FC Fulbert" loading="lazy" width="480" height="300">
+              <img src="assets/images/fc-fulbert-2.webp" alt="Capture d'écran d'une page du site FC Fulbert" loading="lazy" width="480" height="300">
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="section section-alt">
+      <div class="container">
+        <h2 class="reveal">Compétences</h2>
+
+        <p class="skills-highlight reveal">
+          Technologies principales : <strong>PHP · Symfony · JavaScript · MySQL</strong>
+        </p>
+
+        <div class="skills-grid reveal">
+          <div class="skills-group">
+            <h3>Back-end</h3>
+            <ul>
+              <li>PHP</li>
+              <li>Symfony</li>
+              <li>Doctrine ORM</li>
+              <li>Twig</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3>Front-end</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+              <li>DSFR</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3>Bases de données</h3>
+            <ul>
+              <li>SQL</li>
+              <li>MySQL</li>
+              <li>MariaDB</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3>Outils et environnement</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Visual Studio Code</li>
+              <li>Composer</li>
+              <li>npm</li>
+              <li>Netlify</li>
+              <li>VirtualBox</li>
+              <li>Linux</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3>Autres</h3>
+            <ul>
+              <li>Python</li>
+              <li>API REST</li>
+              <li>Programmation orientée objet</li>
+              <li>Gestion des erreurs</li>
+              <li>Débogage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours -->
+    <section id="parcours" class="section">
+      <div class="container">
+        <h2 class="reveal">Parcours</h2>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-header">
+              <h3>BTS Services informatiques aux organisations — option SLAM</h3>
+              <p class="timeline-meta">Lycée Fulbert, Chartres · Septembre 2024 à juin 2026</p>
+            </div>
+            <p>Deux années de formation. Préparation de la session 2027 en candidat individuel.</p>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-header">
+              <h3>Licence informatique — première année</h3>
+              <p class="timeline-meta">Université de Tours · Septembre 2023 à juin 2024</p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <div class="timeline-header">
+              <h3>Baccalauréat général</h3>
+              <p class="timeline-meta">Lycée Marceau, Chartres · 2023</p>
+            </div>
+            <p>Spécialités mathématiques et histoire-géographie, géopolitique et sciences politiques.</p>
+          </li>
+        </ol>
+
+        <div class="languages reveal">
+          <h3 class="languages-title">Langues</h3>
+          <p>Français : langue maternelle</p>
+          <p>Anglais : niveau B2</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-inner">
+        <h2 class="reveal">Travaillons ensemble</h2>
+        <p class="contact-lead reveal">
+          Je recherche actuellement un stage en développement web à Chartres ou dans ses environs.
+          Je suis disponible pour échanger au sujet d'une mission, d'un projet ou d'une opportunité
+          au sein d'une équipe technique.
+        </p>
+
+        <dl class="contact-details reveal">
+          <div class="contact-row">
+            <dt>E-mail</dt>
+            <dd><a href="mailto:yousri.bchk@gmail.com">yousri.bchk@gmail.com</a></dd>
+          </div>
+          <div class="contact-row">
+            <dt>Téléphone</dt>
+            <dd><a href="tel:+33624421748">06 24 42 17 48</a></dd>
+          </div>
+          <div class="contact-row">
+            <dt>LinkedIn</dt>
+            <dd><a href="https://www.linkedin.com/in/yousri-bouchrika" target="_blank" rel="noopener noreferrer">linkedin.com/in/yousri-bouchrika</a></dd>
+          </div>
+          <div class="contact-row">
+            <dt>Localisation</dt>
+            <dd>Chartres, Eure-et-Loir</dd>
+          </div>
+          <div class="contact-row">
+            <dt>Disponibilité</dt>
+            <dd>Du lundi au vendredi · Durée flexible</dd>
+          </div>
+        </dl>
+
+        <div class="contact-actions reveal">
+          <a href="mailto:yousri.bchk@gmail.com" class="btn btn-primary">M'envoyer un e-mail</a>
+          <a href="assets/documents/CV_Yousri_Bouchrika.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yousri Bouchrika — Développeur web junior</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
