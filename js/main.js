@@ -110,4 +110,46 @@
       }, 2000);
     });
   }
+
+  /* Contact form: submit via fetch so the visitor stays on the page and
+     sees an inline success/error message instead of being redirected. */
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    var formStatus = document.getElementById('form-status');
+    var formDefaultNote = formStatus.textContent;
+    var submitBtn = contactForm.querySelector('button[type="submit"]');
+    var submitDefaultLabel = submitBtn.textContent;
+
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Envoi en cours…';
+      formStatus.textContent = formDefaultNote;
+      formStatus.classList.remove('form-status-success', 'form-status-error');
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            formStatus.textContent = 'Message envoyé, merci ! Je réponds dès que possible.';
+            formStatus.classList.add('form-status-success');
+            contactForm.reset();
+          } else {
+            throw new Error('request failed');
+          }
+        })
+        .catch(function () {
+          formStatus.textContent = "L'envoi a échoué. Utilise le bouton \"Copier l'adresse e-mail\" ci-dessous en attendant.";
+          formStatus.classList.add('form-status-error');
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitDefaultLabel;
+        });
+    });
+  }
 })();

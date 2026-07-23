@@ -686,6 +686,17 @@ button.btn { appearance: none; -webkit-appearance: none; }
 .form-note {
   font-size: 0.85rem;
   color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.form-status-success {
+  color: var(--color-cyan);
+  font-weight: 600;
+}
+
+.form-status-error {
+  color: #e0554f;
+  font-weight: 600;
 }
 
 .contact-actions {
