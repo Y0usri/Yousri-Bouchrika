@@ -1,19 +1,25 @@
-# Portfolio — Yousri Bouchrika
+# Yousri Bouchrika — Portfolio
 
-Site vitrine monopage en HTML / CSS / JavaScript vanilla, sans framework ni dépendance de build.
+Développeur web junior (PHP / Symfony / JavaScript / MySQL), à la recherche d'un stage en développement web à Chartres ou dans ses environs.
+
+**Site en ligne : https://y0usri.github.io/**
+
+Site vitrine monopage en HTML / CSS / JavaScript vanilla — sans framework ni dépendance de build, hébergé sur GitHub Pages.
 
 ## Structure
 
 ```
-portfolio/
+.
 ├── index.html
 ├── css/style.css
 ├── js/main.js
 ├── assets/
 │   ├── images/       (photo + captures de projets)
+│   ├── icons/        (favicons)
 │   └── documents/    (CV au format PDF)
-├── favicon.svg
-├── netlify.toml
+├── favicon.ico / favicon.svg
+├── robots.txt
+├── sitemap.xml
 └── README.md
 ```
 
@@ -24,10 +30,7 @@ Aucune installation n'est nécessaire. Deux options :
 1. **Ouvrir directement le fichier** : double-cliquer sur `index.html`.
 2. **Avec un serveur local** (recommandé, évite certains blocages liés au chargement de fichiers) :
    ```bash
-   # avec Python
    python -m http.server 8000
-
-   # ou avec l'extension VS Code "Live Server"
    ```
    Puis ouvrir `http://localhost:8000`.
 
@@ -58,18 +61,14 @@ un lien juste après la liste des technologies, par exemple :
 <a href="https://exemple.com" class="project-link" target="_blank" rel="noopener noreferrer">Voir le projet</a>
 ```
 
-## Déployer sur Netlify
+## Déploiement
 
-**Option 1 — glisser-déposer**
-1. Aller sur [app.netlify.com](https://app.netlify.com).
-2. Glisser le dossier `portfolio` entier sur la zone de dépôt ("Deploys").
-3. Le site est en ligne en quelques secondes.
+Le site est un **site utilisateur GitHub Pages** : ce dépôt s'appelle exactement
+`y0usri.github.io`, donc GitHub le publie automatiquement à la racine
+(`https://y0usri.github.io/`) à chaque push sur la branche `main`, sans configuration
+supplémentaire.
 
-**Option 2 — via Git (recommandé pour les mises à jour futures)**
-1. Créer un dépôt Git et y pousser le contenu du dossier `portfolio`.
-2. Sur Netlify : **New site from Git** → sélectionner le dépôt.
-3. Laisser les réglages de build par défaut (`netlify.toml` s'en charge : pas de commande
-   de build, dossier publié = racine du dépôt).
-4. Déployer.
+## Contact
 
-Aucune variable d'environnement ni étape de build n'est nécessaire : le site est 100 % statique.
+Le formulaire de contact utilise [Formspree](https://formspree.io) — les messages
+partent directement dans la boîte mail, sans backend à maintenir.
