@@ -406,6 +406,24 @@ button.btn { appearance: none; -webkit-appearance: none; }
   border-left: 2px solid var(--color-border);
 }
 
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.exp-logo {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  padding: 4px;
+  margin-top: 0.15rem;
+}
+
 .timeline-header h3 {
   font-size: 1.15rem;
   margin-bottom: 0.25rem;
@@ -527,9 +545,13 @@ button.btn { appearance: none; -webkit-appearance: none; }
 
 .project-link {
   margin-top: var(--space-2);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-weight: 600;
 }
+
+.project-link svg { flex-shrink: 0; }
 
 .project-gallery {
   display: flex;
