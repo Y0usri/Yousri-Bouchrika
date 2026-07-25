@@ -552,6 +552,7 @@ button.btn { appearance: none; -webkit-appearance: none; }
 }
 
 .project-link svg { flex-shrink: 0; }
+.project-link-text { position: relative; top: 1px; }
 
 .project-gallery {
   display: flex;
