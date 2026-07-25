@@ -660,11 +660,16 @@ button.btn { appearance: none; -webkit-appearance: none; }
 }
 
 .contact-row dt {
-  width: 130px;
+  width: 150px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--color-text-muted);
   font-size: 0.9rem;
 }
+
+.contact-row dt svg { flex-shrink: 0; }
 
 .contact-row dd {
   margin: 0;
