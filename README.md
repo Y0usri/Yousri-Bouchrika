@@ -39,7 +39,7 @@ Aucune installation n'est nécessaire. Deux options :
 - **Photo de profil** : remplacer `assets/images/yousri-bouchrika.jpg` par une nouvelle photo en conservant le même nom de fichier (idéalement un carré, au moins 600×600 px).
 - **Captures de projets** : chaque projet réserve deux emplacements dans `assets/images/` :
   - `easybts-1.webp`, `easybts-2.webp`
-  - `vinted-tool-1.webp`, `vinted-tool-2.webp`
+  - `vendjuste-1.webp`, `vendjuste-2.webp`
   - `fc-fulbert-1.webp`, `fc-fulbert-2.webp`
 
   Tant qu'un fichier n'existe pas, le site affiche automatiquement un encadré neutre
